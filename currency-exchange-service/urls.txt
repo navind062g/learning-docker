@@ -1,0 +1,64 @@
+URL for currency exchange service
+http://localhost:8000/currency-exchange/from/USD/to/INR
+
+Some of these URLs may be complex to write by hand:
+
+Refer back to here if you have problems in the next steps.
+
+
+Initial
+
+- http://localhost:8765/CURRENCY-EXCHANGE/currency-exchange/from/USD/to/INR
+
+- http://localhost:8765/CURRENCY-CONVERSION/currency-conversion/from/USD/to/INR/quantity/10
+
+- http://localhost:8765/CURRENCY-CONVERSION/currency-conversion-feign/from/USD/to/INR/quantity/10
+
+
+Lower Case
+
+- http://localhost:8765/currency-exchange/currency-exchange/from/USD/to/INR
+
+- http://localhost:8765/currency-conversion/currency-conversion/from/USD/to/INR/quantity/10
+
+- http://localhost:8765/currency-conversion/currency-conversion-feign/from/USD/to/INR/quantity/10
+
+
+Custom Routes
+
+- http://localhost:8765/currency-exchange/from/USD/to/INR
+
+- http://localhost:8765/currency-conversion/from/USD/to/INR/quantity/10
+
+- http://localhost:8765/currency-conversion-feign/from/USD/to/INR/quantity/10
+
+- http://localhost:8765/currency-conversion-new/from/USD/to/INR/quantity/10
+
+
+**1. Limits Microservice**
+
+Ports: **8080, 8081**, etc.
+
+**2. Spring Cloud Config Server**
+
+Port: **8888**
+
+**3. Currency Exchange Microservice**
+
+Ports: **8000, 8001, 8002**, etc.
+
+**4. Currency Conversion Microservice**
+
+Ports: **8100, 8101, 8102**, etc.
+
+**5. Netflix Eureka Naming Server**
+
+Port: **8761**
+
+**6. API Gateway**
+
+Port: **8765**
+
+**7. Zipkin Distributed Tracing Server**
+
+Port: **9411**
